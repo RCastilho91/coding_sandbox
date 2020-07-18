@@ -4,3 +4,4 @@ class Start {
         System.out.println(hello);
     }
 }
+
