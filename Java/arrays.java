@@ -8,8 +8,11 @@ public class arrays {
         // trying to access an index that does not exist,
         // such as inventory[2] will cause the program to crash
 
-        //creating an empty string array with 3 positions
-
+        // creating an empty string array with 3 positions
         String[] inventory2 = new String[3];
+
+        // printing stuff to evade warnings
+        System.out.println(inventory2);
+        System.out.println(knife);
     }
 }
