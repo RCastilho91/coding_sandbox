@@ -1,4 +1,4 @@
-class Start {
+class VariableSandbox {
     public static void main(String[] args){
         // assigning new variables
         
@@ -9,6 +9,22 @@ class Start {
         int pos;
         pos = 5;
 
-        System.out.println(position + pos);
+        // floats here are known as doubles
+        double accountBalance = 100.25;
+
+        // booleans are declared as such
+        boolean isGameOver = false;
+
+        // strings must be declared in capital S
+        String name = "John";
+
+        // constants are declared with keyword final in front
+        final int maxHealth = 100;
+
+        // printing variables so ES Lint will stop being annoying
+        System.out.println(position + pos + accountBalance);
+        System.out.println(isGameOver);
+        System.out.println(name);
+        System.out.println(maxHealth);
     }
 }
