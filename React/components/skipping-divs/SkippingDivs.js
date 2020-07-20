@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 class BlueDiv extends Component {
 
+    constructor(props){
+        super(props);
+
+        this.state = {
+            itemTranslate: null
+        }
+    }
+
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
