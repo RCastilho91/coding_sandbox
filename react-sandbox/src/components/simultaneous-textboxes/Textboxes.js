@@ -5,8 +5,7 @@ export default class TextBoxes extends Component {
         super(props);
 
         this.state = {
-            textOne: "",
-            textTwo: ""
+            content: ""
         }
     }
 
@@ -14,8 +13,7 @@ export default class TextBoxes extends Component {
         const value = changeEvent.target.value;
         
         this.setState({
-          textOne: value,
-          textTwo: value
+          content: value,
         });
     }
 
@@ -25,16 +23,14 @@ export default class TextBoxes extends Component {
                 <label>Text one</label>
                 <input
                     type="text"
-                    name="textOne"
-                    value={ this.state.textOne }
+                    value={ this.state.content }
                     onChange={ this.handleChange.bind(this) }
                 />
 
                 <label>Text two</label>
                 <input
                     type="text"
-                    name="textTwo"
-                    value={ this.state.textTwo }
+                    value={ this.state.content }
                     onChange={ this.handleChange.bind(this) }
                 />
             </form>
