@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TextBoxes extends Component {
+export default class TextBoxes extends Component {
     constructor(props){
         super(props);
 
@@ -14,8 +14,8 @@ class TextBoxes extends Component {
         const value = changeEvent.target.value;
         
         this.setState({
-          ...state,
-          [ changeEvent.target.name ]: value
+          textOne: value,
+          textTwo: value
         });
     }
 
@@ -25,17 +25,17 @@ class TextBoxes extends Component {
                 <label>Text one</label>
                 <input
                     type="text"
-                    name="text-one"
-                    value={ state.textOne }
-                    onChange={ handleChange }
+                    name="textOne"
+                    value={ this.state.textOne }
+                    onChange={ this.handleChange.bind(this) }
                 />
 
                 <label>Text two</label>
                 <input
                     type="text"
-                    name="text-two"
-                    value={ state.textTwo }
-                    onChange={ handleChange }
+                    name="textTwo"
+                    value={ this.state.textTwo }
+                    onChange={ this.handleChange.bind(this) }
                 />
             </form>
        );
