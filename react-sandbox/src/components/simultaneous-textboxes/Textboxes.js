@@ -19,21 +19,25 @@ export default class TextBoxes extends Component {
 
     render(){
         return(
-            <form>
-                <label>Text one</label>
-                <input
-                    type="text"
-                    value={ this.state.content }
-                    onChange={ this.handleChange.bind(this) }
-                />
+            <div className="container">
+                <div className="input-container">
+                    <label>Text one</label>
+                    <input
+                        type="text"
+                        value={ this.state.content }
+                        onChange={ this.handleChange.bind(this) }
+                    />
+                </div>
 
-                <label>Text two</label>
-                <input
-                    type="text"
-                    value={ this.state.content }
-                    onChange={ this.handleChange.bind(this) }
-                />
-            </form>
+                <div className="input-container">
+                    <label>Text two</label>
+                    <input
+                        type="text"
+                        value={ this.state.content }
+                        onChange={ this.handleChange.bind(this) }
+                    />
+                </div>
+            </div>
        );
     }
 }
