@@ -20,10 +20,10 @@ export default class PopUp extends Component {
     render(){
         return(
             <div>
-                <div className="btn" onClick={this.togglePop}>
+                <div className="btn" onClick={ this.popUpToggle }>
                     <button>Make me disappear again!</button>
                 </div>
-                {this.state.seen ? <PopUp toggle={this.togglePop} /> : null}
+                {this.state.visible ? <PopUp toggle={ this.popUpToggle } /> : null}
            </div>
         )
     }

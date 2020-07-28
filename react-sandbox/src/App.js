@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
-import TextBoxes from './components/simultaneous-textboxes/Textboxes';
+import PopUp from './components/pop-up/PopUp'
 
 function App() {
   return (
     <div className="App">
-      <TextBoxes />
+
+      This is the background of the application
+      
+      <PopUp />
     </div>
   );
 }
