@@ -26,7 +26,6 @@ function sockMerchant(n, ar) {
     }
 
     console.log( Math.floor(currentCounter / 2) );
-
 }
 
 var sockArray = [1, 1, 2, 2, 3, 3, 1, 1, 4, 4, 7, 9, 8, 8, 10, 15]; // has 6 pairs of colors.
