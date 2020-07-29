@@ -27,13 +27,29 @@ s: a string describing his path
 
 function countingValleys(n, s) {
 
+    s = s.split();
+    console.log(s);
+
     // every D will indicate the sea is 1 step upwards, while every U will indicate the opposite
     var stepsToSeaLevel = 0;
 
     // will be set true once stepsToSeaLevel becomes positive
     var currentlyInValley = false;
 
-    // will increase once stepsTaken is greater than 3 
+    // return variable
     var valleysTransposed = 0;
+
+    for( var i = 0; i < s.length; i++ ){
+
+        if( s[i] == "U" ){
+            stepsToSeaLevel -= 1;
+        } else {
+            stepsToSeaLevel += 1;
+        }
+
+        if( stepsToSeaLevel > 0 ){
+            currentlyInValley = true;
+        }
+    }
 
 }
