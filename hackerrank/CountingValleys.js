@@ -25,6 +25,16 @@ s: a string describing his path
 // probably a pretty similar solutioon to SockMerchant.
 // every time the quantity of Us equals that of Ds, a valley has been transposed.
 
+function takeAStep(direction, stepsToSeaLevel) {
+    if( direction == "U" ){
+        stepsToSeaLevel -= 1;
+    } else {
+        stepsToSeaLevel += 1;
+    }
+
+    return stepsToSeaLevel
+}
+
 function countingValleys(n, s) {
 
     s = s.split();
@@ -41,15 +51,25 @@ function countingValleys(n, s) {
 
     for( var i = 0; i < s.length; i++ ){
 
-        if( s[i] == "U" ){
-            stepsToSeaLevel -= 1;
-        } else {
-            stepsToSeaLevel += 1;
-        }
+        takeAStep(s[i], stepsToSeaLevel)
 
         if( stepsToSeaLevel > 0 ){
             currentlyInValley = true;
+
+            while( currentlyInValley == true ) {
+                takeAStep(s[i], stepsToSeaLevel)
+
+                if(stepsToSeaLevel == 0){
+                    currentlyInValley = false;
+                    valleysTransposed += 1;
+                }
+
+                i += 1;
+            }
+
         }
     }
+
+    console.log(valleysTransposed);
 
 }
