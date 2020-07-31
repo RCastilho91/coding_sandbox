@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import PopUp from './components/pop-up/PopUp'
+import PopUpPage from './components/pop-up/PopUpPage';
 
 function App() {
+
   return (
     <div className="App">
-
-      This is the background of the application
-      
-      <PopUp />
+      <PopUpPage />
     </div>
   );
 }
