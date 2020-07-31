@@ -73,3 +73,5 @@ function countingValleys(n, s) {
     console.log(valleysTransposed);
 
 }
+
+countingValleys(8,'DDUUUUDD')
