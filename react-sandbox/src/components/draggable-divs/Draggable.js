@@ -21,8 +21,13 @@ class DraggableDiv extends Component {
     }
 
     render(){
+        var style = {
+            "left": this.state.xCoordinate + "px",
+            "top": this.state.yCoordinate + "px"
+        }
+        
         return(
-            <div className="draggable">
+            <div className="draggable" style={ style }>
                 Drag me around!
             </div>
         )
