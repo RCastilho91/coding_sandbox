@@ -22,7 +22,7 @@ class ModalPage extends Component {
         return(
             <div className="container">
                 <button onClick={this.handleClick}>Click me to open modal</button>
-                <PopUp visible={this.state.activePopup} />
+                {this.state.activePopup ? <PopUp toggle={ this.handleClick } /> : null}
             </div>
         )
     }
