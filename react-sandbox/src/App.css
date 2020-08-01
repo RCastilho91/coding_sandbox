@@ -17,7 +17,7 @@
   border: 1px solid black;
 }
 
-.draggable {
+.draggable-div {
   background-color: steelblue;
   position: absolute;
   color: white;
@@ -27,6 +27,4 @@
   border: 2px solid black;
   width: 240px;
   height: 120px;
-  top: 0;
-  left: 0;
 }
