@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class DraggableDiv extends Component {
 
     constructor(props){
@@ -31,8 +30,7 @@ class DraggableDiv extends Component {
     render(){
         var style = {
             "left": `${ this.state.xCoordinate }px`,
-            "top": `${ this.state.yCoordinate }px`,
-            "background-color": "red"
+            "top": `${ this.state.yCoordinate }px`
         }
         
         return(
