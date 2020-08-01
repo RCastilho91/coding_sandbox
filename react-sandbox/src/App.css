@@ -16,3 +16,15 @@
   display: inline-block;
   border: 1px solid black;
 }
+
+.draggable {
+  background-color: steelblue;
+  position: absolute;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid black;
+  width: 240px;
+  height: 120px;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import PopUpPage from './components/pop-up/PopUpPage';
+import DraggableDiv from './components/draggable-divs/Draggable'
 
 function App() {
 
   return (
     <div className="App">
-      <PopUpPage />
+      <DraggableDiv />
     </div>
   );
 }
