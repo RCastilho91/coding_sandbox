@@ -18,14 +18,17 @@ export default class PopUp extends Component {
     }
 
     render(){
-        return(
-            <div>
-                <div className="btn" onClick={ this.popUpToggle }>
-                    <button>Make me disappear again!</button>
+        if( this.state.visible === true ){
+            return(
+                <div>
+                    <div className="btn" onClick={ this.popUpToggle }>
+                        <button>Make me disappear again!</button>
+                    </div>
                 </div>
-                {this.state.visible ? <PopUp toggle={ this.popUpToggle } /> : null}
-           </div>
-        )
+            );
+        } else {
+            return null;
+        }
     }
 
 }
