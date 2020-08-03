@@ -18,7 +18,6 @@ class HomeIcon extends Component {
     }
 
     render(){
-
         if (this.state.active === true){
             var elementName = "home-icon-active"
         } else {
