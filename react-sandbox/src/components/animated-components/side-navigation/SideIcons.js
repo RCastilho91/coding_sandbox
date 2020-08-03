@@ -26,8 +26,7 @@ class HomeIcon extends Component {
 
         return(
             <div className={ elementName }>
-                Grove St. Home.<p/>
-                At least it was before I fucked everything up.
+                HOME
             </div>
         )
     }
