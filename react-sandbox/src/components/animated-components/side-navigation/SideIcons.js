@@ -28,7 +28,7 @@ class HomeIcon extends Component {
             <div className={ elementName }>
                 HOME
             </div>
-        )
+        );
     }
 }
 
