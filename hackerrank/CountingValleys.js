@@ -31,12 +31,17 @@ function countingValleys(n, s) {
     console.log(arrayedS);
 
     var valleysTransposed = 0;
-    var dCounter = 0;
-    var uCounter = 0;
+    var groundLevel = 0;
 
     for (var i = 0; i < n; i++){
-       arrayedS[i] === "U" ? uCounter += 1 : dCounter += 1;
-       uCounter === dCounter ? valleysTransposed += 1 : null;
+        if(groundLevel == 1){
+            if(arrayedS[i] == "U"){
+                groundLevel -= 1;
+                valleysTransposed += 1;
+            }
+        } else {
+            arrayedS[i] == "U" ? groundLevel -= 1 : groundLevel += 1;
+        }
     }
 
     console.log(valleysTransposed);
