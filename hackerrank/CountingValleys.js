@@ -27,16 +27,16 @@ s: a string describing his path
 
 function countingValleys(n, s) {
 
-    s = Array(s);
-    console.log(s);
+    var arrayedS = s.split('');
+    console.log(arrayedS);
 
     var valleysTransposed = 0;
     var dCounter = 0;
     var uCounter = 0;
 
     for (var i = 0; i < n; i++){
-       i[n] === "U" ? uCounter += 1 : dCounter += 1;
-       uCounter === dCounter ? valleysTransposed += 1 : null; 
+       arrayedS[i] === "U" ? uCounter += 1 : dCounter += 1;
+       uCounter === dCounter ? valleysTransposed += 1 : null;
     }
 
     console.log(valleysTransposed);
