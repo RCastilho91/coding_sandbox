@@ -28,7 +28,6 @@ s: a string describing his path
 function countingValleys(n, s) {
 
     var arrayedS = s.split('');
-    console.log(arrayedS);
 
     var valleysTransposed = 0;
     var groundLevel = 0;
@@ -44,7 +43,7 @@ function countingValleys(n, s) {
         }
     }
 
-    console.log(valleysTransposed);
+    return valleysTransposed
 
 }
 
