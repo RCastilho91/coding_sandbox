@@ -27,7 +27,7 @@ s: a string describing his path
 
 function countingValleys(n, s) {
 
-    s = s.split();
+    s = Array(s);
     console.log(s);
 
     var valleysTransposed = 0;
