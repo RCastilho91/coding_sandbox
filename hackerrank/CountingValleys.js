@@ -22,52 +22,21 @@ n: the number of steps Gary takes
 s: a string describing his path
 */
 
-// probably a pretty similar solutioon to SockMerchant.
-// every time the quantity of Us equals that of Ds, a valley has been transposed.
-
-function takeAStep(direction, stepsToSeaLevel) {
-    if( direction == "U" ){
-        stepsToSeaLevel -= 1;
-    } else {
-        stepsToSeaLevel += 1;
-    }
-
-    return stepsToSeaLevel
-}
+// A counter will be made for every D and U. Every time they equal each other and their number
+// is higher than zero, a valley will be assumed to have been transposed.
 
 function countingValleys(n, s) {
 
     s = s.split();
     console.log(s);
 
-    // every D will indicate the sea is 1 step upwards, while every U will indicate the opposite
-    var stepsToSeaLevel = 0;
-
-    // will be set true once stepsToSeaLevel becomes positive
-    var currentlyInValley = false;
-
-    // return variable
     var valleysTransposed = 0;
+    var dCounter = 0;
+    var uCounter = 0;
 
-    for( var i = 0; i < s.length; i++ ){
-
-        takeAStep(s[i], stepsToSeaLevel)
-
-        if( stepsToSeaLevel > 0 ){
-            currentlyInValley = true;
-
-            while( currentlyInValley == true ) {
-                takeAStep(s[i], stepsToSeaLevel)
-
-                if(stepsToSeaLevel == 0){
-                    currentlyInValley = false;
-                    valleysTransposed += 1;
-                }
-
-                i += 1;
-            }
-
-        }
+    for (var i = 0; i < n; i++){
+       i[n] === "U" ? uCounter += 1 : dCounter += 1;
+       uCounter === dCounter ? valleysTransposed += 1 : null; 
     }
 
     console.log(valleysTransposed);
