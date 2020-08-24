@@ -1,30 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+export default function PopUp( handleClose, visibility ){
+    
+    var style = visibility === true ? "block" : "none";
+    console.log(visibility);
 
-export default class PopUp extends Component {
-    constructor(props){
-        super(props);
-
-        this.popUpToggle = this.popUpToggle.bind(this);
-
-        this.state = {
-            visible: false
-        }
-    }
-
-    popUpToggle() {
-        this.setState({
-            visible: !this.state.visible
-        });
-    }
-
-    render(){
-        return(
-            <div>
-                <div className="btn">
-                    <button onClick={ this.popUpToggle }>Make me disappear again!</button>
-                </div>
-           </div>
-        )
-    }
-
+    return(
+        <div className="modal-container" style={{display: style }}>
+            <div className="modal-content">
+                <button>Close me!</button>
+            </div>
+        </div>
+    )
 }

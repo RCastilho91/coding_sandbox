@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import DraggableDiv from './components/draggable-divs/Draggable';
-import NewDivButton from './components/draggable-divs/NewDivButton';
+import ModalPage from './components/pop-up/PopUpPage';
 
 function App() {
 
   return (
     <div className="App">
-      <DraggableDiv />
-      <NewDivButton />
+      <ModalPage />
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PopUp from './PopUp';
 
-
-class ModalPage extends Component {
+export default class ModalPage extends Component {
     constructor(props){
         super(props);
 
@@ -21,11 +20,9 @@ class ModalPage extends Component {
     render(){
         return(
             <div className="container">
-                <button onClick={this.handleClick}>Click me to open modal</button>
-                {this.state.activePopup ? <PopUp toggle={ this.handleClick } /> : null}
+                <button onClick={ this.handleClick }>Click me to open modal</button>
+                <PopUp handleClose={ this.handleClick } visibility={ this.state.activePopup } />
             </div>
         )
     }
 }
-
-export default ModalPage;
