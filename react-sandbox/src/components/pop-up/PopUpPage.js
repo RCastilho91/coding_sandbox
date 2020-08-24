@@ -20,8 +20,8 @@ export default class ModalPage extends Component {
     render(){
         return(
             <div className="container">
+                { this.state.activePopup ? <PopUp handleClose = { this.handleClick.bind(this) } /> : null}
                 <button onClick={ this.handleClick }>Click me to open modal</button>
-                <PopUp handleClose={ this.handleClick } visibility={ this.state.activePopup } />
             </div>
         )
     }
