@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PopUp from './PopUp';
+import ToggleButton from './ToggleButton';
 
 export default class ModalPage extends Component {
     constructor(props){
@@ -12,6 +13,8 @@ export default class ModalPage extends Component {
     }
 
     handleClick() {
+        console.log("Reached the parent function");
+
         this.setState({
             activePopup: !this.state.activePopup
         })
@@ -21,7 +24,7 @@ export default class ModalPage extends Component {
         return(
             <div className="container">
                 { this.state.activePopup ? <PopUp handleClose = { this.handleClick.bind(this) } /> : null}
-                <button onClick={ this.handleClick }>Click me to open modal</button>
+                <ToggleButton toggleFunction={ this.handleClick } />
             </div>
         )
     }
