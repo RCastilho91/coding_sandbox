@@ -1,3 +1,3 @@
-dim eixo_X as integer
-dim eixo_Y as integer
+dim xAxis as integer
+dim yAxis as integer
 
