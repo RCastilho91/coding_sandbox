@@ -1,0 +1,36 @@
+.initial-div, .div-1, .div-2, .div-3 {
+    color: white;
+    height: 50vh;
+    width: 40vw;
+    border: 0.5px solid black;
+}
+
+.initial-div {
+    background-color: grey;
+}
+
+.div-1 {
+    background-color: antiquewhite;
+}
+
+.div-2 {
+    background-color: blanchedalmond;
+}
+
+.div-3 {
+    background-color: aliceblue;
+}
+
+.forward-button, .backward-button {
+    width: 140px;
+    height: 60px;
+    color: white;
+}
+
+.forward-button {
+    background-color: rgb(12, 143, 12);
+}
+
+.backward-button {
+    background-color: rgb(116, 0, 0);
+}
