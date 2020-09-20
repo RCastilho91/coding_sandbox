@@ -27,5 +27,7 @@ export default function InitialDiv() {
     }
   };
 
-  return { elementToRender };
+  return elementToRender;
 }
+
+// maybe try it simply managing states
