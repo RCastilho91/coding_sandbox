@@ -1,8 +1,10 @@
 import React from "react";
-import { DivOne, DivTwo, DivThree } from "./DifferentComponents";
+import { DivOne, DivTwo, DivThree, StandardDiv } from "./DifferentComponents";
 import "./styles.css";
 
 export default function InitialDiv() {
+  var elementToRender;
+
   var switchCaller = (element) => {
     switcherFunction(element);
   };
@@ -10,23 +12,20 @@ export default function InitialDiv() {
   var switcherFunction = (element) => {
     switch (element) {
       case "div1":
-        return <DivOne switchCaller={switchCaller} />;
+        elementToRender = <DivOne switchCaller={switchCaller} />;
+        break;
       case "div2":
-        return <DivTwo switchCaller={switchCaller} />;
+        elementToRender = <DivTwo switchCaller={switchCaller} />;
+        break;
       case "div3":
-        return <DivThree switchCaller={switchCaller} />;
+        elementToRender = <DivThree switchCaller={switchCaller} />;
+        break;
 
       default:
-        return <InitialDiv />;
+        elementToRender = <StandardDiv switchCaller={switchCaller} />;
+        break;
     }
   };
 
-  return (
-    <div className="initial-div">
-      Hello there. This is the initial div.
-      <div className="div-controls">
-        <button onClick={switchCaller("div1")}>Go to div1</button>
-      </div>
-    </div>
-  );
+  return { elementToRender };
 }

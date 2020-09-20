@@ -1,6 +1,17 @@
 import React from "react";
 import "./styles.css";
 
+function StandardDiv(props) {
+  return (
+    <div className="initial-div">
+      Hello there. This is the initial div.
+      <div className="div-controls">
+        <button onClick={props.switchCaller("div1")}>Go to div1</button>
+      </div>
+    </div>
+  );
+}
+
 function DivOne(props) {
   return (
     <div className="div-1">
@@ -55,4 +66,4 @@ function DivThree(props) {
   );
 }
 
-export { DivOne, DivTwo, DivThree };
+export { DivOne, DivTwo, DivThree, StandardDiv };
