@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import ModalPage from './components/pop-up/PopUpPage';
+import InitialDiv from './components/switch-different-components/Init';
 
 function App() {
 
   return (
     <div className="App">
-      <ModalPage />
+      <InitialDiv />
     </div>
   );
 }
