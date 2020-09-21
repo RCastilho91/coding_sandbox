@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { DivOne, DivTwo, DivThree, StandardDiv } from "./DifferentComponents";
 import "./styles.css";
 
 export default function InitialDiv() {
   var elementToRender;
+  const [currentElement, setCurrentElement] = useState('init')
 
   var switchCaller = (element) => {
-    switcherFunction(element);
+    setCurrentElement(element);
+    switcherFunction(currentElement);
   };
 
   var switcherFunction = (element) => {
@@ -29,5 +31,3 @@ export default function InitialDiv() {
 
   return elementToRender;
 }
-
-// maybe try it simply managing states
