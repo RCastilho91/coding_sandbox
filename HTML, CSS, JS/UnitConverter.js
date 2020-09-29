@@ -1,6 +1,12 @@
 function toggleFromDropdown() {
-console.log("Function reached");
-  document.getElementById("from-dropdown").classList.toggle("show");
+  let dropdown = document.getElementById("from-dropdown");
+  console.log(dropdown.style.display);
+  
+  if (dropdown.style.display === null || dropdown.style.display === "none") {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
 }
 
 function filterFunction() {
@@ -11,12 +17,12 @@ function filterFunction() {
   div = document.getElementById("from-dropdown");
   listItem = div.getElementsByTagName("li");
 
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
+  for (i = 0; i < listItem.length; i++) {
+    txtValue = listItem[i].textContent || listItem[i].innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
+      listItem[i].style.display = "";
     } else {
-      a[i].style.display = "none";
+      listItem[i].style.display = "none";
     }
   }
 }
