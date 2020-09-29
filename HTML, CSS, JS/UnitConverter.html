@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
     <script src="UnitConverter.js"></script>
-    <link rel="text/stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    </link>
 </head>
 
 <body>
@@ -17,8 +18,8 @@
     <div class="app-container">
         <div class="dropdown">
             <button onClick="toggleFromDropdown()" class="dropdown-button">From unit</button>
-            <div id="from-dropdown" class="dropdown-content">
-              <input type="text" id="from-selector-input" onkeyup="filterFunction()">
+            <div id="from-dropdown">
+                <input type="text" id="from-selector-input" onkeyup="filterFunction()">
                 <ul class="dropdown-item-list">
                     <li class="dropdown-item">
                         Option One
@@ -41,7 +42,7 @@
                     </li>
                 </ul>
             </div>
-          </div>
+        </div>
     </div>
 
 </body>
