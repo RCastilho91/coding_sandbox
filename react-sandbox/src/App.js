@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import InitialDiv from './components/switch-different-components/Init';
+import NumberTreatment from './components/numberTreatment/numberTreatment'
 
 function App() {
 
   return (
     <div className="App">
-      <InitialDiv />
+      <NumberTreatment />
     </div>
   );
 }
