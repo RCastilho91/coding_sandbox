@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./NumberTreatment.css";
 
 export default function NumberTreatment() {
+
+  const userInputOne = useRef();
+  const userInputTwo = useRef();
+  const userInputThree = useRef();
+
+  const dealToExponential = () => {
+
+  }
+
+  const valueAesthetics = () => {
+
+  }
+
   return (
     <div className="number-treatment">
       <table>
@@ -12,7 +25,7 @@ export default function NumberTreatment() {
         </tr>
         <tr>
           <td>
-            <input value="0.0000000075626916" />
+            <input ref={userInputOne} value="0.0000000075626916" />
           </td>
           <td>
             <span className="result" id="exponential-result"></span>
@@ -21,12 +34,21 @@ export default function NumberTreatment() {
         </tr>
         <tr>
           <td>
-            <input value="1234567.89" />
+            <input ref={userInputTwo} value="1234567.89" />
           </td>
           <td>
             <span className="result" id="point-comma-result"></span>
           </td>
           <td>1,234,567.89</td>
+        </tr>
+        <tr>
+          <td>
+            <input ref={userInputThree} value="0.00726" />
+          </td>
+          <td>
+            <span className="result" id="point-comma-result"></span>
+          </td>
+          <td>0.00726</td>
         </tr>
       </table>
     </div>
