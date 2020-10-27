@@ -31,7 +31,7 @@ function asciiTransform(array) {
   }
 
   output = outputArray.reduce((a, b) => a + b, 0);
-  console.log(output)
+  console.log(output * -1)
   return output
 }
 

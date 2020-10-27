@@ -34,7 +34,7 @@ function sumOddValues(fibonacci){
         fibonacci[i] % 2 > 0 ? sum += fibonacci[i] : null
     }
 
-    return sum
+    console.log(sum);
 }
 
 createOddValues(fibonacciSequence, limitValue);

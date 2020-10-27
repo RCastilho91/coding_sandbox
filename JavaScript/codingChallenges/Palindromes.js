@@ -6,18 +6,36 @@ reads the same backward as forward, such as madam, racecar, or the number
 What is the sum of all numeric palindromes that are less than 10,000?
 */
 
-var palindromeSum = 0;
-var limit = 10000;
+function createPalindrome(input, b, isOdd) {
+  let n = input;
+  let palin = input;
 
-function sumPalindromeValues(limit) {
-  for (let i = 10; i < limit; i++) {
-    let stringifier = (i + "").split("");
-    let reversed = parseInt(stringifier.reverse().join(""));
-
-    i === reversed ? (palindromeSum += i) : null;
+  if (isOdd) {
+    n = Math.floor(n / b);
   }
 
-  return palindromeSum
+  while (n > 0) {
+    palin = palin * b + (n % b);
+    n = Math.floor(n / b);
+  }
+  return palin;
 }
 
-sumPalindromeValues(10000)
+function generateNumbericPalindromes(n) {
+  let number;
+  let output = [];
+
+  for (let j = 0; j < 2; j++) {
+
+    let i = 1;
+    while ((number = createPalindrome(i, 10, j % 2)) < n) {
+      output.push(number);
+      i++;
+    }
+  }
+  return output;
+}
+
+console.log(
+  generateNumbericPalindromes(10000).reduce((acc, next) => acc + next, 0)
+);
