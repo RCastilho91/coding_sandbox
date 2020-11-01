@@ -33,4 +33,11 @@ def diagonalsDifference(array):
     firstDiagonal = array[0] + array[4] + array[8]
     secondDiagonal = array[2] + array[4] + array[6]
 
-sampleArray = [1,2,3,4,5,6,9,8,9]
+    output = firstDiagonal - secondDiagonal
+    if output < 0:
+        output *= -1
+
+    return output
+
+sampleArray = [1,2,3,4,5,6,9,8,9] # should return 2
+diagonalsDifference(sampleArray)
