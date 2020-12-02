@@ -10,7 +10,7 @@ than 10,000?
 var fibonacciSequence = [0, 1];
 var lastIndex = 0;
 var prevLastIndex = 0;
-var limitValue = 10000;
+var limitValue = 3;
 var newLastValue = 0;
 
 function createOddValues(fibonacci, limit) {
