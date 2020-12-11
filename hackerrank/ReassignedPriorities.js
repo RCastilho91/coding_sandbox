@@ -5,9 +5,7 @@
 function reassignedPriorities(priorities){
     var outputList = [];
     const simplifiedList = Array.from(new Set(priorities));
-    console.log(`Simplified array: ${ simplifiedList }`);
     simplifiedList.sort(function(a, b){return a-b});
-    console.log(`Simplified array: ${ simplifiedList }`);
 
     for(var i = 0; i < priorities.length; i++){
         for(var j = 0; j < simplifiedList.length; j++){
