@@ -1,0 +1,20 @@
+{
+  "campaignId": "11875857796",
+  "campaignName": "[Remarketing] Seth [Natal]",
+  "campaignCpa": 26.1569935,
+  "campaignRoas": 0,
+  "campaignConversions": 4,
+  "aggregatedCost": 69.82424899999998,
+  "aggregatedConversions": 2,
+  "aggregatedConversionValue": 0,
+  "aggregatedRoas": 0,
+  "aggregatedCpa": 34.91212449999999,
+  "topSpendingApps": [
+    "Mobile App: Messenger : All-in-One Messaging & Video Calling (Google Play), by Halilov Mobiles",
+    "Mobile App: Free Video Calls - Online Calling Messaging Chats (Google Play), by altan mobiles",
+    "Mobile App: All in One Speed Camera-Traffic Police Radar Maps (Google Play), by Pierre Ltd",
+    "Mobile App: Direto Pro Zap (Google Play), by SolMkt"
+  ],
+  "yearlySavings": 849.53,
+  "customer_id": "2965465709"
+}
