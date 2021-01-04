@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import NumberTreatment from './components/numberTreatment/numberTreatment'
+import Countdown from "./components/countdown/Countdown";
 
 function App() {
 
   return (
     <div className="App">
-      <NumberTreatment />
+        <Countdown />
     </div>
   );
 }
